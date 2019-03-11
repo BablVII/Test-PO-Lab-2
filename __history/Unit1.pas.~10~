@@ -1,0 +1,70 @@
+unit Unit1;
+
+interface
+
+uses
+  System.Generics.Collections, PhisicsControllerUnit, ControllersUnit,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    procedure FormCreate(Sender: TObject);
+  private
+    list:Tlist<string>;
+    Panels: TList<TPanel>;
+    /// <link>aggregation</link>
+    Controller1: Controllers;
+    procedure createPanels(list: TList<string>);
+  public
+    procedure onClick1(sender;TObject);
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.createPanels(list: TList<string>);
+var
+  i: integer;
+  s: string;
+begin
+  i := 0;
+  Panels := TList<TPanel>.create;
+  self.list := TList<string>.create;
+  self.list := list;
+  for s in list do
+  begin
+    Panels.Add(TPanel.create(self));
+    with Panels.Last do
+    begin
+      Parent := self;
+      Top := i * 41;
+      Caption := s;
+      Width := 300;
+      OnClick := OnClick1;
+    end;
+  end;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+  list: TList<string>;
+begin
+  Controller1 := PhisicsController.create;
+  list := TList<string>.create;
+  list := Controller1.getMenu;
+  createPanels(Controller1.getMenu);
+end;
+
+procedure TForm1.onClick1(sender, TObject);
+begin
+  Controller1.setTest((Sender as TPanel).caption);
+end;
+
+end.

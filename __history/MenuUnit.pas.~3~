@@ -1,0 +1,11 @@
+unit MenuUnit;
+
+interface
+
+type
+  Menu =Class
+
+  End;
+implementation
+
+end.

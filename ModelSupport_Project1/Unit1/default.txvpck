@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ce4pe2bjkngpf2o5m_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:Project1:Unit1.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:Project1:Unit1.@unitclass.Form1" />
+      <reference referencedUin="delphi:l_ast:src:Project1:Unit1.@unitclass.Form1" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:Unit1.TForm1">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,136,175" />
+      <reference referencedUin="delphi:e_field:src:Project1:Unit1.TForm1.Controller1" />
+      <reference referencedUin="delphi:l_ast:src:Project1:Unit1.TForm1.Controller1">
+        <property name="sourceAnchor" value="146,93" />
+        <property name="targetAnchor" value="265,93" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:Project1:Unit1.TForm1.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:Project1:Unit1.TForm1.createPanels(System.Generics.Collections.TList&lt;System.string&gt;)" />
+      <reference referencedUin="delphi:e_field:src:Project1:Unit1.TForm1.list" />
+      <reference referencedUin="delphi:e_field:src:Project1:Unit1.TForm1.Panels" />
+      <reference referencedUin="delphi:e_method:src:Project1:Unit1.TForm1.onClick1(,)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:ControllersUnit.Controllers">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="265,79,166,96" />
+      <reference referencedUin="delphi:e_method:src:Project1:ControllersUnit.Controllers.getMenu()" />
+      <reference referencedUin="delphi:e_method:src:Project1:ControllersUnit.Controllers.setTest(System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:PhisicsControllerUnit.PhisicsController">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="240,200,236,145" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:l_impl:src:Project1:PhisicsControllerUnit.PhisicsController:ControllersUnit.Controllers">
+        <property name="sourceAnchor" value="348,200" />
+        <property name="targetAnchor" value="348,175" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:Project1:PhisicsControllerUnit.PhisicsController.getMenu()" />
+      <reference referencedUin="delphi:e_field:src:Project1:PhisicsControllerUnit.PhisicsController.Menu1" />
+      <reference referencedUin="delphi:l_ast:src:Project1:PhisicsControllerUnit.PhisicsController.Menu1">
+        <property name="sourceAnchor" value="476,240" />
+        <property name="targetAnchor" value="660,240" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:Project1:PhisicsControllerUnit.PhisicsController.Test" />
+      <reference referencedUin="delphi:e_method:src:Project1:PhisicsControllerUnit.PhisicsController.setTest(System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:MenuUnit.Menu">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="680,320,139,115" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:l_impl:src:Project1:MenuUnit.Menu:MainUnit.Main">
+        <property name="sourceAnchor" value="744,320" />
+        <property name="targetAnchor" value="744,281" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:Project1:MenuUnit.Menu.getMenu()" />
+      <reference referencedUin="delphi:e_field:src:Project1:MenuUnit.Menu.Adapter1" />
+      <reference referencedUin="delphi:l_ast:src:Project1:MenuUnit.Menu.Adapter1">
+        <property name="sourceAnchor" value="819,372" />
+        <property name="targetAnchor" value="900,372" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:MainUnit.Main">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="660,200,149,81" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:Project1:MainUnit.Main.getMenu()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:AdaptersUnit.Adapters">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="900,340,149,81" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:Project1:AdaptersUnit.Adapters.getMenu()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:AccessAdapterUnit.AccessAdapter">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="860,520,214,130" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:l_impl:src:Project1:AccessAdapterUnit.AccessAdapter:AdaptersUnit.Adapters">
+        <property name="sourceAnchor" value="974,520" />
+        <property name="targetAnchor" value="974,421" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:Project1:AccessAdapterUnit.AccessAdapter.ADOConnection" />
+      <reference referencedUin="delphi:e_method:src:Project1:AccessAdapterUnit.AccessAdapter.getMenu()" />
+      <reference referencedUin="delphi:e_method:src:Project1:AccessAdapterUnit.AccessAdapter.create()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:TestsUnit.Tests">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="460,380,104,64" />
+      <property name="location_set_by_user" value="True" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:Test1Unit.Test1">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="460,520,129,81" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:l_impl:src:Project1:Test1Unit.Test1:TestsUnit.Tests">
+        <property name="sourceAnchor" value="512,520" />
+        <property name="targetAnchor" value="512,444" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+  </view>
+</nodeSet>

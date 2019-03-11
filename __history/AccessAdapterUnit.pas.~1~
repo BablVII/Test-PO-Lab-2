@@ -1,0 +1,11 @@
+unit AccessAdapterUnit;
+
+interface
+
+type
+  AccessAdapter = class
+
+  end;
+implementation
+
+end.

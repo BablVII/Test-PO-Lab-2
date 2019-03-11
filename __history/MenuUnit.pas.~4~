@@ -1,0 +1,12 @@
+unit MenuUnit;
+
+interface
+
+uses MainUnit;
+
+type
+  Menu = Class(TInterfacedObject, Main)
+  End;
+implementation
+
+end.

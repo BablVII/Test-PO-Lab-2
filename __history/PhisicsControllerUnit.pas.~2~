@@ -1,0 +1,13 @@
+unit PhisicsControllerUnit;
+
+interface
+
+uses ControllersUnit;
+
+type
+  PhisicsController = class(TInterfacedObject, Controllers)
+  end;
+
+implementation
+
+end.

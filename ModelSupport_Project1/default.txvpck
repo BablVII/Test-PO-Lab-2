@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="a59bnhl0qhfrvkhxg_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::yvydsxoghog5ey7sn_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,101,134" />
+      <reference referencedUin="delphi:e_class:src:Project1:Project1.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::ce4pe2bjkngpf2o5m_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="130,1,100,151" />
+      <reference referencedUin="delphi:e_class:src:Project1:Unit1.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:Project1:Unit1.TForm1" />
+    </reference>
+    <reference referencedUin="design:view:::z0726c00q0l3d2exm_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="249,1,137,151" />
+      <reference referencedUin="delphi:e_class:src:Project1:ControllersUnit.Controllers" />
+      <reference referencedUin="delphi:e_class:src:Project1:ControllersUnit.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::a60y1r0p8ap_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="249,171,170,151" />
+      <reference referencedUin="delphi:e_class:src:Project1:PhisicsControllerUnit.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:Project1:PhisicsControllerUnit.PhisicsController" />
+    </reference>
+    <reference referencedUin="design:view:::cnxrbwfoa9f_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="111,163,108,134" />
+      <reference referencedUin="delphi:e_class:src:Project1:MenuUnit.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:Project1:MenuUnit.Menu" />
+    </reference>
+    <reference referencedUin="design:view:::hj553j2pgx7hx2cyq_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Project1:MainUnit.Main" />
+      <reference referencedUin="delphi:e_class:src:Project1:MainUnit.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::ct7jymaw4ip57rmpn_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Project1:AdaptersUnit.Adapters" />
+      <reference referencedUin="delphi:e_class:src:Project1:AdaptersUnit.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::u5i3g4lj32t_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Project1:AccessAdapterUnit.AccessAdapter" />
+      <reference referencedUin="delphi:e_class:src:Project1:AccessAdapterUnit.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::jpvp8qoz7gq_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Project1:TestsUnit.Tests" />
+      <reference referencedUin="delphi:e_class:src:Project1:TestsUnit.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::bbk224j19ye0y8ogs_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Project1:Test1Unit.Test1" />
+    </reference>
+  </view>
+</nodeSet>

@@ -1,0 +1,26 @@
+unit MenuUnit;
+
+interface
+
+uses
+  AccessAdapterUnit,
+  AdaptersUnit,
+  System.Generics.Collections,
+  MainUnit;
+
+type
+  Menu = Class(TInterfacedObject, Main)
+  private
+    Adapter1: Adapters;
+    function getMenu: TList<string>;
+  End;
+
+implementation
+
+function Menu.getMenu: TList<string>;
+begin
+  result := TList<string>.create;
+  result :=;
+end;
+
+end.

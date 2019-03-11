@@ -1,0 +1,11 @@
+unit TestsUnit;
+
+interface
+
+type
+  Tests = interface
+
+  end;
+implementation
+
+end.
