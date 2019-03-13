@@ -1,0 +1,57 @@
+unit Test1Unit;
+
+interface
+
+uses
+  AccessAdapterUnit,
+  System.Generics.Collections,
+  AdaptersUnit,
+  TestsUnit;
+
+type
+  Test1 = class(TInterfacedObject, Tests)
+  private
+    countQuest: integer;
+    // <link>aggregation</link>
+    Adapter: Adapters;
+    Quest: TList<string>;
+    AnswerTrue: TDictionary < string, integer>;
+    AnswerFalse: TDictionary < string, integer>;
+  public
+    function NextQuest: string;
+    procedure setTest(caption: string);
+    function getQuestCaption: string;
+  published
+    constructor create;
+  end;
+
+implementation
+
+{ Test1 }
+
+constructor Test1.create;
+begin
+  Adapter := AccessAdapter.create;
+end;
+
+function Test1.getQuestCaption: string;
+begin
+  result := NextQuest;
+end;
+
+function Test1.NextQuest: string;
+begin
+  result:= Quest.Items(countQuest);
+  countQuest:=countQuest+1;
+end;
+
+procedure Test1.setTest(caption: string);
+begin
+  Adapter.setTest(caption);
+  Quest := Adapter.getQuest;
+  AnswerTrue := Adapter.getAnswerTrue;
+  AnswerFalse := Adapter.getAnswerFalse;
+  countQuest:=0;
+end;
+
+end.

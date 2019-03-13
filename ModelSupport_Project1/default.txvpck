@@ -29,33 +29,39 @@
     </reference>
     <reference referencedUin="design:view:::cnxrbwfoa9f_v">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="111,163,108,134" />
+      <property name="bounds" value="111,163,108,151" />
       <reference referencedUin="delphi:e_class:src:Project1:MenuUnit.@unitclass" />
       <reference referencedUin="delphi:e_class:src:Project1:MenuUnit.Menu" />
     </reference>
     <reference referencedUin="design:view:::hj553j2pgx7hx2cyq_v">
       <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="268,341,104,151" />
       <reference referencedUin="delphi:e_class:src:Project1:MainUnit.Main" />
       <reference referencedUin="delphi:e_class:src:Project1:MainUnit.@unitclass" />
     </reference>
     <reference referencedUin="design:view:::ct7jymaw4ip57rmpn_v">
       <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="457,1,127,151" />
       <reference referencedUin="delphi:e_class:src:Project1:AdaptersUnit.Adapters" />
       <reference referencedUin="delphi:e_class:src:Project1:AdaptersUnit.@unitclass" />
     </reference>
     <reference referencedUin="design:view:::u5i3g4lj32t_v">
       <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="457,171,160,151" />
       <reference referencedUin="delphi:e_class:src:Project1:AccessAdapterUnit.AccessAdapter" />
       <reference referencedUin="delphi:e_class:src:Project1:AccessAdapterUnit.@unitclass" />
     </reference>
     <reference referencedUin="design:view:::jpvp8qoz7gq_v">
       <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="159,352,107,151" />
       <reference referencedUin="delphi:e_class:src:Project1:TestsUnit.Tests" />
       <reference referencedUin="delphi:e_class:src:Project1:TestsUnit.@unitclass" />
     </reference>
     <reference referencedUin="design:view:::bbk224j19ye0y8ogs_v">
       <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="50,352,108,151" />
       <reference referencedUin="delphi:e_class:src:Project1:Test1Unit.Test1" />
+      <reference referencedUin="delphi:e_class:src:Project1:Test1Unit.@unitclass" />
     </reference>
   </view>
 </nodeSet>

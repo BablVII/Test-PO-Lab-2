@@ -2,10 +2,18 @@ unit TestsUnit;
 
 interface
 
+uses
+  System.Generics.Collections;
+
 type
   Tests = interface
-    procedure setTest(caption:string);
+    function getListAnswer: TList<string>;                   //function getTListAnswer: TList<string>;
+    function getQuestCaption: TList<string>;
+    procedure setTest(caption: string);
+    {function getAnswerTrue: TDictionary<string, integer>;
+    function getAnswerFalse: TDictionary<string, integer>; }
   end;
+
 implementation
 
 end.

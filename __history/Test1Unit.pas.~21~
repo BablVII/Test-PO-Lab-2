@@ -1,0 +1,84 @@
+unit Test1Unit;
+
+interface
+
+uses
+  AccessAdapterUnit,
+  System.Generics.Collections,
+  AdaptersUnit,
+  TestsUnit;
+
+type
+  Test1 = class(TInterfacedObject, Tests)
+  private
+    countQuest: integer;
+    // <link>aggregation</link>
+    // <link>aggregation</link>
+    Adapter: Adapters;
+    Quest: TList<string>;
+    AnswerTrue: TDictionary<string, integer>;
+    AnswerFalse: TDictionary<string, integer>;
+    function NextQuest: string;
+    function NextAnswer: TList<string>;
+  public
+    function getListAnswer: TList<string>;
+    procedure setTest(caption: string);
+    function getQuestCaption: string;
+  published
+    constructor create;
+  end;
+
+implementation
+
+{ Test1 }
+
+function Test1.NextAnswer: TList<string>;
+var
+  key: string;
+  value: integer;
+begin
+  result := TList<string>.create;
+  for key in AnswerTrue.keys do
+    begin
+      if AnswerTrue.Items[key]=countQuest then
+        result.add(key);
+    end;
+  for key in AnswerFalse.keys do
+    begin
+      if AnswerFalse.Items[key]=countQuest then
+        result.Add(key);
+    end;
+end;
+
+constructor Test1.create;
+begin
+  Adapter := AccessAdapter.create;
+end;
+
+function Test1.getListAnswer: TList<string>;
+begin
+  result := TList<string>.create;
+  result := NextAnswer;
+end;
+
+function Test1.getQuestCaption: string;
+begin
+  result := NextQuest;
+end;
+
+function Test1.NextQuest: string;
+begin
+  result := Quest.Items(countQuest);
+  countQuest := countQuest + 1;
+end;
+
+procedure Test1.setTest(caption: string);
+begin
+  Adapter.setTest(caption);
+  Quest := Adapter.getQuest;
+  AnswerTrue := Adapter.getAnswerTrue;
+  AnswerFalse := Adapter.getAnswerFalse;
+  countQuest := 0;
+end;
+
+end.

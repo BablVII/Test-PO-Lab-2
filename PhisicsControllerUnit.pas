@@ -13,29 +13,65 @@ uses
 type
   PhisicsController = class(TInterfacedObject, Controllers)
   private
+    /// <link>aggregation</link>
     Test: Tests;
     /// <link>aggregation</link>
     Menu1: Main;
   public
+    function getListAnswer: TList<string>;
+    function getQuestCaption: string;
     procedure setTest(caption: string);
     function getMenu: TList<string>;
+    { ;
+      function getAnswerTrue: TDictionary<integer, string>;
+      function getAnswerFalse: TDictionary<integer, string>; }
   end;
 
 implementation
 
 { PhisicsController }
 
+function PhisicsController.getListAnswer: TList<string>;
+begin
+  result := Test.getListAnswer;
+end;
+
+{
+  function PhisicsController.getAnswerFalse: TDictionary<string, integer>;
+  begin
+  result := TDictionary<string, integer>.create;
+  result := Test.getAnswerFalse;
+  end;
+
+  function PhisicsController.getAnswerTrue: TDictionary<string, integer>;
+  begin
+  result := TDictionary<string, integer>.create;
+  result := Test.getAnswerTrue;
+  end;
+
+  function PhisicsController.getQuest: TList<string>;
+  begin
+  result := TList<string>.create;
+  result := Test.getQuest;
+  end;
+}
+
 function PhisicsController.getMenu: TList<string>;
 begin
   result := TList<string>.create;
-  Menu1:= Menu.Create;
-  result:= Menu1.getMenu;
+  Menu1 := Menu.create;
+  result := Menu1.getMenu;
+end;
+
+function PhisicsController.getQuestCaption: string;
+begin
+  result := Test.getQuestCaption;
 end;
 
 procedure PhisicsController.setTest(caption: string);
 begin
   Test := Test1.create;
-  Test.SetTest(caption);
+  Test.setTest(caption);
 end;
 
 end.

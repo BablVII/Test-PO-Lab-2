@@ -1,0 +1,18 @@
+unit ControllersUnit;
+
+interface
+
+uses System.Generics.Collections;
+
+type
+  Controllers = interface
+    procedure setTest(caption: string);
+    function getMenu: TList<string>;
+    function getQuest: TList<string>;
+    function getAnswerTrue: TList<string>;
+    function getAnswerFalse: TList<string>;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,19 @@
+unit AdaptersUnit;
+
+interface
+
+uses
+  System.Generics.Collections;
+
+type
+  Adapters = interface
+    function getMenu: TList<string>;
+    procedure setTest(caption: string);
+    function getQuest: TList<string>;
+    function getAnswerTrue: TDictionary<integer, string>;
+    function getAnswerFalse: TDictionary<integer, string>;
+  end;
+
+implementation
+
+end.

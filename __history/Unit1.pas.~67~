@@ -1,0 +1,110 @@
+unit Unit1;
+
+interface
+
+uses
+  System.Generics.Collections,
+  PhisicsControllerUnit,
+  ControllersUnit,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    procedure FormCreate(Sender: TObject);
+  private
+    // quest: TList<string>;
+    // answerTrue: TDictionary<string, integer>;
+    // answerFalse: TDictionary<string, integer>;
+    list: Tlist<string>;
+    Buttons: Tlist<TButton>;
+    /// <link>aggregation</link>
+    Controller1: Controllers;
+    procedure getQuest;
+    procedure destroyButtons;
+    procedure createButtons(list: Tlist<string>);
+  public
+    procedure onButtonClick1(Sender: TObject);
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.getQuest;
+questCaption:
+string;
+begin
+  questCaption := Controller1.getQuestCaption;
+  createQuestCaption;
+  listAnswer := Tlist<string>.Create;
+  createListAnswer(listAnswer);
+  createNextAnswer;
+end;
+
+procedure TForm1.destroyButtons;
+var
+  b: TButton;
+begin
+  for b in Buttons do
+  begin
+    b.Parent := nil;
+  end;
+  Buttons.DeleteRange(0, Buttons.Count - 1);
+end;
+
+procedure TForm1.createButtons(list: Tlist<string>);
+var
+  i: integer;
+  s: string;
+begin
+  i := 0; // почему умножение на 0?
+  Buttons := Tlist<TButton>.Create;
+  self.list := Tlist<string>.Create;
+  self.list := list;
+  for s in list do
+  begin
+    Buttons.Add(TButton.Create(self));
+    with Buttons.Last do
+    begin
+      Parent := self;
+      Top := i * 41;
+      Caption := s;
+      Width := 300;
+      OnClick := onButtonClick1;
+    end;
+  end;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+  list: Tlist<string>;
+begin
+  Controller1 := PhisicsController.Create;
+  list := Tlist<string>.Create;
+  list := Controller1.getMenu;
+  createButtons(list);
+end;
+
+procedure TForm1.onButtonClick1(Sender: TObject);
+var
+  questCaption: string;
+  listAnswer: Tlist<string>;
+begin
+  Controller1.setTest((Sender as TButton).Caption);
+  destroyButtons;
+  getQuest;
+  { quest := Tlist<string>.create;
+    answerTrue := TDictionary<integer, string>.create;
+    answerFalse := TDictionary<integer, string>.create;
+    quest := Controller1.getQuest;
+    answerTrue := Controller1.getAnswerTrue;
+    answerFalse := Controller1.getAnswerFalse; }
+end;
+
+end.
